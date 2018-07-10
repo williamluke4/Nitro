@@ -1,12 +1,12 @@
-# Next.js example
+# Next.js, Material UI, Styled Components and Typescript example
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+Download the example:
 
 ```bash
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
+git clone https://github.com/williamluke4/nextjs-materialui-styledcomponents.git
+cd nextjs-materialui-styledcomponents
 ```
 
 Install it and run:
@@ -16,6 +16,3 @@ npm install
 npm run dev
 ```
 
-## The idea behind the example
-
-[Next.js](https://github.com/zeit/next.js) is a framework for server-rendered React apps.

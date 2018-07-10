@@ -17,8 +17,12 @@ const styles = theme => ({
   },
 });
 const StyledButton = styled.div`
-  height: 100px;
-  width:100px;
+  width:  150px;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+  color: white;
+  background-color: blue;
 `;
 
 class Index extends React.Component {
@@ -45,10 +49,9 @@ class Index extends React.Component {
     return (
       <div className={classes.root}>
         <Dialog open={open} onClose={this.handleClose}>
-          <StyledButton></StyledButton>
-          <DialogTitle>Super Secret Password</DialogTitle>
+          <DialogTitle>It Works</DialogTitle>
           <DialogContent>
-            <DialogContentText>1-2-3-4-5</DialogContentText>
+            <DialogContentText>Dialog Content</DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button color="primary" onClick={this.handleClose}>
@@ -57,14 +60,14 @@ class Index extends React.Component {
           </DialogActions>
         </Dialog>
         <Typography variant="display1" gutterBottom>
-          Material-UI
+          All in One
         </Typography>
         <Typography variant="subheading" gutterBottom>
-          example project
+          Material-UI; NextJS; Styled Components; Typescript
         </Typography>
-        <Button variant="contained" color="secondary" onClick={this.handleClick}>
-          Super Secret Password
-        </Button>
+        <StyledButton variant="contained" color="secondary" onClick={this.handleClick}>
+          Open Dialog
+        </StyledButton>
       </div>
     );
   }
