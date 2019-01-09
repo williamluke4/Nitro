@@ -2,16 +2,12 @@
 
 ## How to use
 
-Download the example:
+Download, Install and Run :
 
 ```bash
 git clone https://github.com/williamluke4/nextjs-materialui-styledcomponents.git
 cd nextjs-materialui-styledcomponents
-```
 
-Install it and run:
-
-```bash
 npm install
 npm run dev
 ```
