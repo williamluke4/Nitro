@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import JssProvider from 'react-jss/lib/JssProvider';
 import flush from 'styled-jsx/server';
@@ -6,13 +6,14 @@ import getPageContext from '../src/getPageContext';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
+  static getInitialProps: (ctx: any) => any;
   render() {
     const { pageContext, styleTags } = this.props;
 
     return (
       <html lang="en" dir="ltr">
         <Head>
-          <title>My page</title>
+          <title>: )</title>
           <meta charSet="utf-8" />
           {styleTags}
           {/* Use minimum-scale=1 to enable GPU rasterization */}
@@ -59,7 +60,7 @@ MyDocument.getInitialProps = ctx => {
 
   // Get the context of the page to collected side effects.
   const pageContext = getPageContext();
-  const sheet = new ServerStyleSheet()
+  const sheet = new ServerStyleSheet();
   const page = ctx.renderPage(Component => props => sheet.collectStyles(
     <JssProvider
       registry={pageContext.sheetsRegistry}

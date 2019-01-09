@@ -1,22 +1,25 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "jsx": "preserve",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "skipLibCheck": true,
     "baseUrl": ".",
-    "lib": [
-      "dom",
-      "es2016"
-    ]
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom", "esnext.asynciterable"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "components/*": [ "components/*" ],
   }
+  },
+  "exclude": ["node_modules", ".next", ".vscode"]
 }

@@ -1,60 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
+import CustomDialog from 'components/CustomDialog';
+import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import styled from 'styled-components';
+import { withStyles, WithStyles, createStyles, Theme } from '@material-ui/core/styles';
+import StyledButton from 'components/StyledButton';
+import { Chip, Avatar } from '@material-ui/core';
 
-const styles = theme => ({
+const styles = (theme: Theme) => createStyles({
   root: {
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 20,
   },
+  chipContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  chip: {
+    margin: '5px 10px'
+  }
 });
-const StyledButton = styled.div`
-  display: block;
-  width: 186px;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  letter-spacing: 2px;
-  color: white;
-  font-size: 16px;
-  height: 35px;
-  text-align: center;
-  margin: 20px auto;
-  cursor: pointer;
-  border-radius: 3px;
-  &:after {
-    position: absolute;
-    content:'';
-    display: inline-block;
-    background: rgba(59,173,227,1);
-    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
-    height: 100%;
-    width: 372px;
-    z-index: -1;
-    transform: translateX(-280px);
-    transition: transform 400ms ease-in;
-  }
-
-  &:hover {
-    &:after {
-      transform: translateX(-200px);
-    }
-  }
-  span {
-    position: relative;
-    top: 8px;
-  }
-`;
-
-class Index extends React.Component {
+interface IProps extends WithStyles<typeof styles> {}
+class Index extends React.Component<IProps> {
   state = {
     open: false,
   };
@@ -63,47 +28,60 @@ class Index extends React.Component {
     this.setState({
       open: false,
     });
-  };
+  }
 
   handleClick = () => {
     this.setState({
       open: true,
     });
-  };
-
+  }
+  handleOpenLink = (href: string) => {
+    window.open(href);
+    return false;
+  }
   render() {
     const { classes } = this.props;
     const { open } = this.state;
 
     return (
       <div className={classes.root}>
-        <Dialog open={open} onClose={this.handleClose}>
-          <DialogTitle>It Works</DialogTitle>
-          <DialogContent>
-            <DialogContentText>Dialog Content</DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button color="primary" onClick={this.handleClose}>
-              OK
-            </Button>
-          </DialogActions>
-        </Dialog>
+        <CustomDialog   open={open}  handleClose={this.handleClose}/>
         <Typography variant="display1" gutterBottom>
           All in One
         </Typography>
-        <Typography variant="subheading" gutterBottom>
-          Material-UI; NextJS; Styled Components; Typescript
-        </Typography>
-        <StyledButton variant="contained" color="secondary" onClick={this.handleClick}>
-          <span>Open Dialog</span>
-        </StyledButton>
+        <div className={classes.chipContainer}>
+          <Chip
+            avatar={<Avatar alt="MUI" src="https://material-ui.com/static/brand.png" />}
+            label="Material-UI"
+            className={classes.chip}
+            onClick={() => this.handleOpenLink('https://material-ui.com')}
+            />
+          <Chip
+            avatar={<Avatar alt="NextJS" src="https://assets.zeit.co/image/upload/front/assets/design/black-triangle.png" />}
+            label="NextJS"
+            className={classes.chip}
+            onClick={() => this.handleOpenLink('https://nextjs.org/')}
+            />
+          <Chip
+            // tslint:disable-next-line:max-line-length
+            avatar={<Avatar alt="SC" src="https://spectrum.imgix.net/communities/e8792514-dc32-43ff-a26e-81c85754f193/test.png.0.3184486404030735?w=256&h=256&expires=1544486400000&ixlib=js-1.2.0&s=5ab9c6cdf01d76b38415625109707284" />}
+            label="Styled Components"
+            className={classes.chip}
+            onClick={() => this.handleOpenLink('https://www.styled-components.com/')}
+            />
+          <Chip
+            avatar={<Avatar alt="TS" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" />}
+            label="Typescript"
+            className={classes.chip}
+            onClick={() => this.handleOpenLink('https://www.typescriptlang.org/')}
+          />
+        </div>
+        <StyledButton onClick={this.handleClick} label="Open Dialog"/>
       </div>
     );
   }
 }
 
-Index.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+
 
 export default withStyles(styles)(Index);
