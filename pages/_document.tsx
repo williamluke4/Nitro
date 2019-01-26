@@ -8,6 +8,7 @@ import { ServerStyleSheet } from 'styled-components';
 class MyDocument extends Document {
   static getInitialProps: (ctx: any) => any;
   render() {
+    console.log(this.props);
     const { pageContext, styleTags } = this.props;
 
     return (
@@ -15,6 +16,7 @@ class MyDocument extends Document {
         <Head>
           <title>: )</title>
           <meta charSet="utf-8" />
+          <noscript id="jss-insertion-point"></noscript>
           {styleTags}
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
@@ -29,7 +31,7 @@ class MyDocument extends Document {
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-          />
+            />
         </Head>
         <body>
           <Main />

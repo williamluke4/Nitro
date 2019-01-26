@@ -4,11 +4,14 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles, WithStyles, createStyles, Theme } from '@material-ui/core/styles';
 import StyledButton from 'components/StyledButton';
 import { Chip, Avatar } from '@material-ui/core';
-
 const styles = (theme: Theme) => createStyles({
   root: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
+    paddingTop: theme.spacing.unit * 10,
+    height: '100vh',
+    backgroundImage: 'url(static/background.png)',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
   },
   chipContainer: {
     display: 'flex',
@@ -16,6 +19,12 @@ const styles = (theme: Theme) => createStyles({
   },
   chip: {
     margin: '5px 10px'
+  },
+  strip: {
+    paddingTop: 30,
+    paddingBottom: 30,
+    backgroundColor: '#ffffff87'
+
   }
 });
 interface IProps extends WithStyles<typeof styles> {}
@@ -45,6 +54,7 @@ class Index extends React.Component<IProps> {
 
     return (
       <div className={classes.root}>
+        <div className={classes.strip}>
         <CustomDialog   open={open}  handleClose={this.handleClose}/>
         <Typography variant="display1" gutterBottom>
           All in One
@@ -76,7 +86,10 @@ class Index extends React.Component<IProps> {
             onClick={() => this.handleOpenLink('https://www.typescriptlang.org/')}
           />
         </div>
-        <StyledButton onClick={this.handleClick} label="Open Dialog"/>
+        <StyledButton onClick={this.handleClick}>
+          Open Dialog
+        </StyledButton>
+        </div>
       </div>
     );
   }

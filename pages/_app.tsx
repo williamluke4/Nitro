@@ -1,17 +1,20 @@
 import * as React from 'react';
 import App, { Container } from 'next/app';
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider, jssPreset } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../src/getPageContext';
+import { create } from 'jss';
+
+// This insures that MUI styles are loaded before Styled-Comonents
+const jss = create({
+  ...jssPreset(),
+  // We define a custom insertion point that JSS will look for injecting the styles in the DOM.
+  insertionPoint: process.browser ?  window.document.getElementById('jss-insertion-point') : null,
+});
 
 class MyApp extends App {
-  constructor(props) {
-    super(props);
-    this.pageContext = getPageContext();
-  }
-
-  pageContext = null;
+  pageContext = getPageContext();
 
   componentDidMount() {
     // Remove the server-side injected CSS.
@@ -27,6 +30,7 @@ class MyApp extends App {
       <Container>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider
+          jss={jss}
           registry={this.pageContext.sheetsRegistry}
           generateClassName={this.pageContext.generateClassName}
         >

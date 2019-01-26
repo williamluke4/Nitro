@@ -1,8 +1,8 @@
-# Next.js, Material UI, Styled Components and Typescript example
+# Next.js, Material UI, Styled Components and Typescript Example
 
-## How to use
+![NMST](screenshot.png)
 
-Download, Install and Run :
+## NPM
 
 ```bash
 git clone https://github.com/williamluke4/nextjs-materialui-styledcomponents.git
@@ -12,3 +12,12 @@ npm install
 npm run dev
 ```
 
+## Yarn
+
+```bash
+git clone https://github.com/williamluke4/nextjs-materialui-styledcomponents.git
+cd nextjs-materialui-styledcomponents
+
+yarn
+yarn dev
+```
