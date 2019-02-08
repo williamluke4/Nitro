@@ -26,7 +26,7 @@
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-react": "7.12.3",
+    "eslint-plugin-react": "7.12.4",
     "jest": "24.1.0",
     "nodemon": "1.18.9"
   },
