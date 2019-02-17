@@ -6,7 +6,7 @@
     "@material-ui/core": "3.8.2",
     "@zeit/next-typescript": "1.1.1",
     "jss": "latest",
-    "next": "7.0.2",
+    "next": "7.0.3",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/eslint": "4.16.5",
-    "@types/next": "7.0.6",
+    "@types/next": "7.0.9",
     "@types/react-jss": "8.6.0",
     "@types/styled-components": "4.1.5",
     "@types/styled-jsx": "2.2.8",
