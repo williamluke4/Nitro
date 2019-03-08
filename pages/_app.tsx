@@ -1,9 +1,13 @@
 import * as React from 'react';
 import App, { Container } from 'next/app';
-import { MuiThemeProvider, jssPreset } from '@material-ui/core/styles';
+
+import { jssPreset } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
-import getPageContext from '../src/getPageContext';
+import getPageContext from 'utils/getPageContext';
+import { ThemeProvider } from '@material-ui/styles';
+import { StylesProvider } from '@material-ui/styles';
+
 import { create } from 'jss';
 
 // This insures that MUI styles are loaded before Styled-Comonents
@@ -29,24 +33,23 @@ class MyApp extends App {
     return (
       <Container>
         {/* Wrap every page in Jss and Theme providers */}
-        <JssProvider
+        <StylesProvider
           jss={jss}
           registry={this.pageContext.sheetsRegistry}
           generateClassName={this.pageContext.generateClassName}
         >
           {/* MuiThemeProvider makes the theme available down the React
               tree thanks to React context. */}
-          <MuiThemeProvider
+          <ThemeProvider
             theme={this.pageContext.theme}
-            sheetsManager={this.pageContext.sheetsManager}
           >
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             {/* Pass pageContext to the _document though the renderPage enhancer
                 to render collected styles on server side. */}
             <Component pageContext={this.pageContext} {...pageProps} />
-          </MuiThemeProvider>
-        </JssProvider>
+          </ThemeProvider>
+        </StylesProvider>
       </Container>
     );
   }

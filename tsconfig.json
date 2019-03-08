@@ -19,6 +19,8 @@
     "noUnusedParameters": true,
     "paths": {
       "components/*": [ "components/*" ],
+      "styles/*": [ "styles/*" ],
+      "utils/*": [ "utils/*" ],
   }
   },
   "exclude": ["node_modules", ".next", ".vscode"]

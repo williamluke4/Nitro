@@ -1,14 +1,13 @@
-import * as React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+import * as React from 'react';
 import JssProvider from 'react-jss/lib/JssProvider';
-import flush from 'styled-jsx/server';
-import getPageContext from '../src/getPageContext';
 import { ServerStyleSheet } from 'styled-components';
+import flush from 'styled-jsx/server';
+import getPageContext from '../utils/getPageContext';
 
 class MyDocument extends Document {
   static getInitialProps: (ctx: any) => any;
   render() {
-    console.log(this.props);
     const { pageContext, styleTags } = this.props;
 
     return (
