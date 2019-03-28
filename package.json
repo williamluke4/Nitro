@@ -8,8 +8,8 @@
     "@zeit/next-typescript": "^1.1.1",
     "jss": "^9.8.7",
     "next": "8.0.3",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-jss": "^8.6.1",
     "styled-components": "^4.1.3"
   },
