@@ -1,4 +1,5 @@
-# Next.js, Material UI, Styled Components and Typescript Example
+# Next.js, Material UI and Typescript Example
+ Styled Components has been removed in favour of the @material-ui [implementation](https://material-ui.com/guides/interoperability/)
 ## Links
 - [NPM Setup](#npm)
 - [YARN Setup](#yarn)
