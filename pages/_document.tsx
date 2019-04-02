@@ -1,36 +1,27 @@
-import Document, { Head, Main, NextScript } from 'next/document';
 import * as React from 'react';
-import JssProvider from 'react-jss/lib/JssProvider';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheets } from '@material-ui/styles';
 import flush from 'styled-jsx/server';
-import getPageContext from '../utils/getPageContext';
+import theme from 'styles/theme';
 
 class MyDocument extends Document {
-  static getInitialProps: (ctx: any) => any;
   render() {
-    const { pageContext, styleTags } = this.props;
-
     return (
       <html lang="en" dir="ltr">
         <Head>
-          <title>: )</title>
           <meta charSet="utf-8" />
-          <noscript id="jss-insertion-point"></noscript>
-          {styleTags}
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
             name="viewport"
-            content={
-              'user-scalable=0, initial-scale=1, ' +
-              'minimum-scale=1, width=device-width, height=device-height'
-            }
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
+          <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"></link>
           {/* PWA primary color */}
-          <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
+          <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-            />
+          />
         </Head>
         <body>
           <Main />
@@ -41,50 +32,49 @@ class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = ctx => {
+MyDocument.getInitialProps = async ctx => {
   // Resolution order
   //
   // On the server:
-  // 1. page.getInitialProps
-  // 2. document.getInitialProps
-  // 3. page.render
-  // 4. document.render
+  // 1. app.getInitialProps
+  // 2. page.getInitialProps
+  // 3. document.getInitialProps
+  // 4. app.render
+  // 5. page.render
+  // 6. document.render
   //
   // On the server with error:
-  // 2. document.getInitialProps
+  // 1. document.getInitialProps
+  // 2. app.render
   // 3. page.render
   // 4. document.render
   //
   // On the client
-  // 1. page.getInitialProps
-  // 3. page.render
+  // 1. app.getInitialProps
+  // 2. page.getInitialProps
+  // 3. app.render
+  // 4. page.render
 
-  // Get the context of the page to collected side effects.
-  const pageContext = getPageContext();
-  const sheet = new ServerStyleSheet();
-  const page = ctx.renderPage(Component => props => sheet.collectStyles(
-    <JssProvider
-      registry={pageContext.sheetsRegistry}
-      generateClassName={pageContext.generateClassName}
-    >
-      <Component pageContext={pageContext} {...props} />
-    </JssProvider>
-  ));
-  const styleTags = sheet.getStyleElement();
+  // Render app and page and get the context of the page with collected side effects.
+  const sheets = new ServerStyleSheets();
+  const originalRenderPage = ctx.renderPage;
+
+  ctx.renderPage = () =>
+    originalRenderPage({
+      enhanceApp: App => props => sheets.collect(<App {...props} />),
+    });
+
+  const initialProps = await Document.getInitialProps(ctx);
+
   return {
-    ...page,
-    pageContext,
+    ...initialProps,
+    // Styles fragment is rendered after the app and page rendering finish.
     styles: (
       <React.Fragment>
-        <style
-          id="jss-server-side"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
-        />
+        {sheets.getStyleElement()}
         {flush() || null}
       </React.Fragment>
     ),
-    styleTags,
   };
 };
 

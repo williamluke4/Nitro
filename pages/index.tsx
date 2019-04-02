@@ -5,11 +5,12 @@ import { Theme } from '@material-ui/core/styles';
 import StyledButton from 'components/StyledButton';
 import { Chip, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import Head from 'next/head';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 10,
+    paddingTop: theme.spacing(10),
     height: '100vh',
     backgroundImage: 'url(static/background.png)',
     backgroundSize: 'cover',
@@ -41,10 +42,13 @@ const Index: React.SFC = () => {
 
   return (
     <div className={classes.root}>
+      <Head>
+        <title>Nitro</title>
+      </Head>
       <div className={classes.strip}>
       <CustomDialog   open={open}  handleClose={() => setOpen(false)}/>
       <Typography variant="h3" gutterBottom>
-        All in One
+        Nitro
       </Typography>
       <div className={classes.chipContainer}>
         <Chip
@@ -58,13 +62,6 @@ const Index: React.SFC = () => {
           label="NextJS"
           className={classes.chip}
           onClick={() => handleOpenLink('https://nextjs.org/')}
-          />
-        <Chip
-          // tslint:disable-next-line:max-line-length
-          avatar={<Avatar alt="SC" src="https://spectrum.imgix.net/communities/e8792514-dc32-43ff-a26e-81c85754f193/test.png.0.3184486404030735?w=256&h=256&expires=1544486400000&ixlib=js-1.2.0&s=5ab9c6cdf01d76b38415625109707284" />}
-          label="Styled Components"
-          className={classes.chip}
-          onClick={() => handleOpenLink('https://www.styled-components.com/')}
           />
         <Chip
           avatar={<Avatar alt="TS" src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" />}
