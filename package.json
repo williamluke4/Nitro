@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/eslint": "4.16.6",
-    "@types/next": "8.0.3",
+    "@types/next": "8.0.4",
     "@types/react-jss": "8.6.3",
     "@types/styled-jsx": "2.2.8",
     "@types/typescript": "2.0.0",
