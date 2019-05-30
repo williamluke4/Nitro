@@ -11,7 +11,7 @@ interface ICustomDialogProps {
   open: boolean;
   handleClose: () => void;
 }
-const CustomDialog: React.SFC<ICustomDialogProps> = ({open, handleClose}) => (
+const CustomDialog: React.FC<ICustomDialogProps> = ({open, handleClose}) => (
   <Dialog open={open} onClose={handleClose}>
     <DialogTitle>It Works</DialogTitle>
     <DialogContent>

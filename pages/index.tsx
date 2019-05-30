@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }),                          {withTheme: true});
 
-const Index: React.SFC = () => {
+const Index: React.FC = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleOpenLink = (href: string) => {
