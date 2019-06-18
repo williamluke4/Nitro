@@ -37,7 +37,7 @@
     "jest": "24.8.0",
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
-    "prettier-eslint": "8.8.2",
+    "prettier-eslint": "9.0.0",
     "typescript": "3.5.1"
   },
   "scripts": {
