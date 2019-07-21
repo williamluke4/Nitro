@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: '#ffffff87'
 
   }
-}),                          {withTheme: true});
+}));
 
 const Index: React.FC = () => {
   const [open, setOpen] = React.useState(false);

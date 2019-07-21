@@ -2,7 +2,6 @@
 const withPlugins = require('next-compose-plugins');
 const nextEnv = require('next-env');
 const dotenvLoad = require('dotenv-load');
-const typescript = require('@zeit/next-typescript');
 const offline = require('next-offline');
 
 dotenvLoad();
@@ -20,7 +19,6 @@ const nextConfig = {
 
 module.exports = withPlugins([
   nextEnv(),
-  [typescript],
   [offline]
 ], nextConfig);
 
