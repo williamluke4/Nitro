@@ -20,7 +20,7 @@
   "devDependencies": {
     "@types/eslint": "4.16.6",
     "@types/next": "8.0.6",
-    "@types/react-jss": "8.6.3",
+    "@types/react-jss": "8.6.4",
     "@types/styled-jsx": "2.2.8",
     "@types/typescript": "2.0.0",
     "@typescript-eslint/parser": "1.13.0",
