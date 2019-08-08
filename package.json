@@ -14,8 +14,8 @@
     "next-compose-plugins": "2.2.0",
     "next-env": "1.1.0",
     "next-offline": "4.0.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "devDependencies": {
     "@types/eslint": "4.16.6",
@@ -33,7 +33,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.14.3",
-    "eslint-plugin-react-hooks": "1.6.1",
+    "eslint-plugin-react-hooks": "1.7.0",
     "jest": "24.8.0",
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
