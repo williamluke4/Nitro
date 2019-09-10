@@ -38,7 +38,7 @@
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
     "prettier-eslint": "9.0.0",
-    "typescript": "3.5.3"
+    "typescript": "3.6.3"
   },
   "scripts": {
     "dev": "next -p 1420",
