@@ -1,9 +1,6 @@
 {
   "name": "nitro",
   "version": 2,
-  "alias": [
-    "nitro.atto-byte.com"
-  ],
   "builds": [{
     "src": "next.config.js",
     "use": "@now/next"
