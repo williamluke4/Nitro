@@ -8,9 +8,10 @@ dotenvLoad();
 
 
 const nextConfig = {
-  target: 'serverless',
+  target: process.env.NODE_ENV !== 'production' ? 'server' : 'serverless',
+  dontAutoRegisterSw: true,
   generateSw: false,
-  generateInDevMode: true,
+  devSwSrc: 'static/sw.js',
   workboxOpts: {
     swSrc: 'static/sw.js',
     swDest: 'static/service-worker.js',

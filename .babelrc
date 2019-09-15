@@ -8,7 +8,7 @@
         "alias": {
           "components": "./components",
           "utils": "./utils",
-          "styles": "./styles",
+          "styles": "./styles"
         }
       }
     ]
