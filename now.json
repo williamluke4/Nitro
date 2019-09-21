@@ -1,23 +1,27 @@
 {
   "name": "nitro",
   "version": 2,
-  "builds": [{
-    "src": "next.config.js",
-    "use": "@now/next"
-  }],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
   "build": {
     "env": {
-      "NEXT_PUBLIC_AUTH0_DOMAIN":"atto-byte.eu.auth0.com",
-      "NEXT_PUBLIC_AUTH0_CLIENT_ID":"JaQQXAoTymOPz5aY9Poc45qBQsPf31BB",
+      "NEXT_PUBLIC_AUTH0_DOMAIN": "atto-byte.eu.auth0.com",
+      "NEXT_PUBLIC_AUTH0_CLIENT_ID": "JaQQXAoTymOPz5aY9Poc45qBQsPf31BB"
     }
   },
   "regions": ["bru"],
-  "routes": [{
-    "src": "^/service-worker.js$",
-    "dest": "/_next/static/service-worker.js",
-    "headers": {
-      "cache-control": "public, max-age=43200, immutable",
-      "Service-Worker-Allowed": "/"
+  "routes": [
+    {
+      "src": "^/service-worker.js$",
+      "dest": "/_next/static/service-worker.js",
+      "headers": {
+        "cache-control": "public, max-age=43200, immutable",
+        "Service-Worker-Allowed": "/"
+      }
     }
-  }]
+  ]
 }
