@@ -6,7 +6,6 @@ const offline = require('next-offline');
 
 dotenvLoad();
 
-
 const nextConfig = {
   target: process.env.NODE_ENV !== 'production' ? 'server' : 'serverless',
   dontAutoRegisterSw: true,
@@ -18,8 +17,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins([
-  nextEnv(),
-  [offline]
-], nextConfig);
-
+module.exports = withPlugins([nextEnv(), [offline]], nextConfig);

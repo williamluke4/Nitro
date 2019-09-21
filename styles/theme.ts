@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { purple, green } from '@material-ui/core/colors';
+import { green } from '@material-ui/core/colors';
 
 // A theme with custom primary and secondary color.
 // It's optional.
@@ -8,9 +8,8 @@ const theme = createMuiTheme({
   drawerWidth: 240,
   palette: {
     primary: {
-      light: purple[300],
-      main: purple[500],
-      dark: purple[700],
+      main: "#2d2d2d",
+      text: "#fff",
     },
     secondary: {
       light: green[300],
