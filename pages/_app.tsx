@@ -6,6 +6,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from 'styles/theme';
 import { AuthProvider } from "use-auth0";
 
+const auth0_domain=process.env.AUTH0_DOMAIN as string
+const auth0_client_id=process.env.AUTH0_CLIENT_ID as string
+
 class MyApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
@@ -17,13 +20,13 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps, router } = this.props;
-
+    console.log(auth0_domain)
     return (
       <ThemeProvider theme={theme}>
         <AuthProvider
           navigate={(route: string) => router.push(route)}
-          auth0_domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN as string}
-          auth0_client_id={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID as string}
+          auth0_domain={auth0_domain}
+          auth0_client_id={auth0_client_id}
         >
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <Head>

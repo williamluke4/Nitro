@@ -11,10 +11,13 @@
 
 ## Links
 
+- [AUTH0 Setup](#auth0)
 - [NPM Setup](#npm)
 - [YARN Setup](#yarn)
-
 ![NMST](screenshot.png)
+
+## Auth0
+ Video On [Secrets and Environment Variables in Next.js and Now](https://www.youtube.com/watch?v=pRbQcy9f5ew)
 
 ## NPM
 

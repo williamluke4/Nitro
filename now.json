@@ -9,13 +9,9 @@
   ],
   "build": {
     "env": {
-      "NEXT_PUBLIC_AUTH0_DOMAIN": "atto-byte.eu.auth0.com",
-      "NEXT_PUBLIC_AUTH0_CLIENT_ID": "JaQQXAoTymOPz5aY9Poc45qBQsPf31BB"
+      "AUTH0_DOMAIN": "@auth0-domain",
+      "AUTH0_CLIENT_ID": "@auth0-client-id"
     }
-  },
-  "env": {
-    "NEXT_PUBLIC_AUTH0_DOMAIN": "atto-byte.eu.auth0.com",
-    "NEXT_PUBLIC_AUTH0_CLIENT_ID": "JaQQXAoTymOPz5aY9Poc45qBQsPf31BB"
   },
   "regions": ["bru"],
   "routes": [

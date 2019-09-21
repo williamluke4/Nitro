@@ -46,7 +46,7 @@
     "typescript": "3.6.3"
   },
   "scripts": {
-    "dev": "next -p 8080",
+    "dev": "now dev --listen 8080",
     "build": "next build",
     "start": "next start"
   }
