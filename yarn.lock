@@ -6085,10 +6085,10 @@ next-env@1.1.0:
   resolved "https://registry.yarnpkg.com/next-env/-/next-env-1.1.0.tgz#15794560d58caad74ac78c8db2f60bbabb0fc452"
   integrity sha512-eSmpCrYzFqjN9en98jEvhz5Bzw5Ui4h8lV/Kua2zOFlD1NU+MG91u90M1WA6+mUnQROYy2Xv0FvVKNbZpeN8Ew==
 
-next-offline@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/next-offline/-/next-offline-4.0.5.tgz#e77c7d38034bff969fa5ad3b5e1f18ce01d1ab7b"
-  integrity sha512-yoQx2PvtPICuz4NwSDrtNgfw9uSBbK0uh/MG+e59zFXDhA2n38M8+65My2WvXfR1JXQwSnrDlrIlWwc6x7kxsg==
+next-offline@4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/next-offline/-/next-offline-4.0.6.tgz#c2c5f1a08518b83cd60cafb9485752955ebefc00"
+  integrity sha512-uLU1g2DrAdIilTUUznBlrymDaQA4WFfZA3lDmTDZ6hUIai1X/JlghiMmuBEwPuuJEdZHv1ExBpyucoUSNpXjlg==
   dependencies:
     clean-webpack-plugin "^0.1.19"
     copy-webpack-plugin "~4.5.2"
