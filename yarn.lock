@@ -6097,10 +6097,10 @@ next-offline@4.0.6:
     webpack "^4.19.1"
     workbox-webpack-plugin "^4.3.1"
 
-next@9.0.8:
-  version "9.0.8"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.0.8.tgz#ea37d7f64d754ea4608d15d6be3809b4be3f698f"
-  integrity sha512-vG8AasXnZ7sYYAaqKwFYnsgAGDkX8NdKDSHHz0Pzi//HN/9qJf6JnycEB4Jif8dIarDE8JWDjnBKw3Aw/lsFHg==
+next@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.1.0.tgz#f3bf82b333b2a4549cd9897487f5147a8a558878"
+  integrity sha512-6eTyOHPgpOONeOoV83mELr8RnktRePXtnhqUr03me0Ilbe8+Yd+5uHxuGRPGlFmgb8VM6HloUybY0/KpP9lJ9w==
   dependencies:
     "@ampproject/toolbox-optimizer" "1.0.1"
     "@babel/core" "7.4.5"
