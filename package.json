@@ -43,7 +43,7 @@
     "nodemon": "1.19.4",
     "prettier": "1.18.2",
     "prettier-eslint": "9.0.0",
-    "typescript": "3.6.4"
+    "typescript": "3.7.2"
   },
   "scripts": {
     "dev": "now dev --listen 8080",
