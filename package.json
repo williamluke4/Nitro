@@ -42,7 +42,7 @@
     "jest": "24.9.0",
     "nodemon": "1.19.4",
     "prettier": "1.19.1",
-    "prettier-eslint": "9.0.0",
+    "prettier-eslint": "9.0.1",
     "typescript": "3.7.2"
   },
   "scripts": {
