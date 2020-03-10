@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
-import flush from 'styled-jsx/server';
-import theme from 'styles/theme';
+import * as React from "react";
+import Document, { Head, Main, NextScript } from "next/document";
+import { ServerStyleSheets } from "@material-ui/core/styles";
+import flush from "styled-jsx/server";
+import theme from "styles/theme";
 
 class MyDocument extends Document {
   render() {
@@ -15,7 +15,11 @@ class MyDocument extends Document {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
-          <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon"></link>
+          <link
+            rel="shortcut icon"
+            href="static/favicon.ico"
+            type="image/x-icon"
+          ></link>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
@@ -61,7 +65,7 @@ MyDocument.getInitialProps = async ctx => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />),
+      enhanceApp: App => props => sheets.collect(<App {...props} />)
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -74,7 +78,7 @@ MyDocument.getInitialProps = async ctx => {
         {sheets.getStyleElement()}
         {flush() || null}
       </React.Fragment>
-    ),
+    )
   };
 };
 
