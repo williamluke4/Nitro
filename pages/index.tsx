@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { Chip, Avatar } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Head from 'next/head';
 import { Layout } from 'components/Layout';
 import { RocketMan } from 'components/RocketMan';

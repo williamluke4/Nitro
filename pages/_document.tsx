@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/styles';
+import { ServerStyleSheets } from '@material-ui/core/styles';
 import flush from 'styled-jsx/server';
 import theme from 'styles/theme';
 

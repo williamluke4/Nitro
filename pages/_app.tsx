@@ -1,7 +1,7 @@
 import * as React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from 'styles/theme';
 import { AuthProvider } from "use-auth0";
