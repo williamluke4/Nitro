@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/dotenv": "8.2.0",
-    "@types/eslint": "6.8.0",
+    "@types/eslint": "6.8.1",
     "@types/gsap": "1.20.2",
     "@types/react-jss": "10.0.0",
     "@types/styled-jsx": "2.2.8",
