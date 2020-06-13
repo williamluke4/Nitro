@@ -1,5 +1,4 @@
-nitro
-=====
+# nitro
 
 Creates NextJS WPAs from templates
 
@@ -9,11 +8,15 @@ Creates NextJS WPAs from templates
 [![License](https://img.shields.io/npm/l/nitro.svg)](https://github.com/williamluke4/nitro/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @atto-byte/nitro
 $ nitro COMMAND
@@ -25,11 +28,15 @@ USAGE
   $ nitro COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`nitro create [TEMPLATE]`](#nitro-create-template)
-* [`nitro help [COMMAND]`](#nitro-help-command)
+
+- [`nitro create [TEMPLATE]`](#nitro-create-template)
+- [`nitro help [COMMAND]`](#nitro-help-command)
 
 ## `nitro create [TEMPLATE]`
 
@@ -65,4 +72,5 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src\commands\help.ts)_
+
 <!-- commandsstop -->

@@ -1,4 +1,4 @@
-# **Nitro** -  Next.js, Material UI, Auth0 and Typescript 
+# **Nitro** - Next.js, Material UI, Auth0 and Typescript
 
 ![GitHub stars](https://img.shields.io/github/stars/williamluke4/nitro.svg?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/williamluke4/nitro.svg?style=for-the-badge)
@@ -7,6 +7,7 @@
 ![NMST](nitro.gif)
 
 ##
+
 - PR's are very welcome
 
 - Please add `.env` to `.gitignore` before adding any secrets
@@ -18,8 +19,9 @@
 - [YARN Setup](#yarn)
 
 ## Auth
- - [Auth0 Setup](https://github.com/atto-byte/useAuth)
- - Video On [Secrets and Environment Variables in Next.js and Now](https://www.youtube.com/watch?v=pRbQcy9f5ew)
+
+- [Auth0 Setup](https://github.com/atto-byte/useAuth)
+- Video On [Secrets and Environment Variables in Next.js and Now](https://www.youtube.com/watch?v=pRbQcy9f5ew)
 
 ## NPM
 

@@ -1,0 +1,25 @@
+{
+  "version": "0.0.0",
+  "commands": {
+    "create": {
+      "id": "create",
+      "description": "nitro create basic ",
+      "pluginName": "nitro",
+      "pluginType": "core",
+      "aliases": [],
+      "examples": [
+        "$ nitro create basic something-awesome\nhello world from ./src/hello.ts!\n"
+      ],
+      "flags": {
+        "help": {
+          "name": "help",
+          "type": "boolean",
+          "char": "h",
+          "description": "show CLI help",
+          "allowNo": false
+        }
+      },
+      "args": [{ "name": "template" }]
+    }
+  }
+}
