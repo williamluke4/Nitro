@@ -227,6 +227,18 @@
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.11.tgz#d3614d6c5f500142358e6ed24e1bf16657536c50"
   integrity sha512-t7uW6eFafjO+qJ3BIV2gGUyZs27egcNRkUdalkud+Qa3+kg//f129iuOFivHDXQ+vnU3fDXuwgv0cqMCbcE8sw==
 
+"@types/cli-color@*":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/cli-color/-/cli-color-2.0.0.tgz#dc64e32da0fb9ea1814300fb468a58e833ce71a6"
+  integrity sha512-E2Oisr73FjwxMHkYU6RcN9P9mmrbG4TNQMIebWhazYxOgWRzA7s4hM+DtAs6ZwiwKFbPst42v1XUAC1APIhRJA==
+
+"@types/clui@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@types/clui/-/clui-0.3.0.tgz#a7512770d50c06b403e018c46f850a0064e53c74"
+  integrity sha512-4GM6iuKwOs4Lq2qUWbxw8LMiamh6YXEuPq4uKeYd7SfFWNK1sNsw41M9GjIhwbIRBOaVgxkutZLLdfZwSNDwtg==
+  dependencies:
+    "@types/cli-color" "*"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -285,15 +297,10 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
   integrity sha512-NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==
 
-"@types/node@*":
+"@types/node@*", "@types/node@^14.0.13":
   version "14.0.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
   integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
-
-"@types/node@^10":
-  version "10.17.26"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.26.tgz#a8a119960bff16b823be4c617da028570779bcfd"
-  integrity sha512-myMwkO2Cr82kirHY8uknNRHEVtn0wV3DTQfkrjx17jmkstDRZ24gNUdl8AHXVyVclTYI/bNjgTPTAWvWLqXqkw==
 
 "@types/sinon@*":
   version "9.0.4"

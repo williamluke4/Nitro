@@ -4,6 +4,7 @@ import * as inquirer from "inquirer";
 import * as logger from "../logger";
 import * as fs from "fs-extra";
 import { templatesPath, examplePath, getDirectories } from "../directories";
+import chalk = require("chalk");
 
 export default class Create extends Command {
   static description = "nitro create basic ";
@@ -39,18 +40,21 @@ hello world from ./src/hello.ts!
     ]);
     const template = responses.template;
     const name = !responses || responses.name === "." ? null : responses.name;
-    const templateLocation = path.join(templatesPath, template)
-    logger.log(process.env.NODE_ENV);
-    logger.run(
+    const templateLocation = path.join(templatesPath, template);
+    await logger.run(
       "Copying Files",
       fs.copy(
         path.join(templatesPath, template),
         name ? path.join(examplePath, name) : path.join(examplePath)
       )
     );
-    const rawdata = fs.readFileSync(path.join(templateLocation, 'package.json'));
-    const package = JSON.parse(rawdata);
-    logger.log(package.scripts)
-
+    const rawdata: any = fs.readFileSync(
+      path.join(templateLocation, "package.json")
+    );
+    const pkg = JSON.parse(rawdata);
+    logger.title(" Scripts ");
+    Object.keys(pkg.scripts).map((cmd) => {
+      logger.log(`\t ${chalk.bold(cmd)}\t: ${pkg.scripts[cmd]}`);
+    });
   }
 }

@@ -28,28 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`nitro hello [FILE]`](#nitro-hello-file)
+* [`nitro create [TEMPLATE]`](#nitro-create-template)
 * [`nitro help [COMMAND]`](#nitro-help-command)
 
-## `nitro hello [FILE]`
+## `nitro create [TEMPLATE]`
 
-describe the command here
+nitro create basic
 
 ```
 USAGE
-  $ nitro hello [FILE]
+  $ nitro create [TEMPLATE]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 
 EXAMPLE
-  $ nitro hello
+  $ nitro create basic something-awesome
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/williamluke4/nitro/blob/v0.0.0/src\commands\hello.ts)_
+_See code: [src\commands\create.ts](https://github.com/williamluke4/nitro/blob/v0.0.0/src\commands\create.ts)_
 
 ## `nitro help [COMMAND]`
 

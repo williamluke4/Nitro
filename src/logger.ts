@@ -1,51 +1,55 @@
-import * as chalk from 'chalk'
-import * as inquirer from 'inquirer'
-import * as CLI from 'clui'
+import * as chalk from "chalk";
+import * as inquirer from "inquirer";
+import * as CLI from "clui";
 
-export const Spinner = CLI.Spinner
+export const Spinner = CLI.Spinner;
 
 export function log(value: string) {
-  console.log(value)
+  console.log(value);
+}
+
+export function title(value: string) {
+  console.log(chalk.bold(value));
 }
 export function error(value: string) {
-  console.error(chalk.red(` ❌  ${value}`))
+  console.error(chalk.red(` ❌  ${value}`));
 }
 export function success(value: string) {
-  console.log(chalk.green(` ✔️  ${value}`))
+  console.log(chalk.green(` ✔️  ${value}`));
 }
 export function warn(value: string) {
-  console.log(chalk.yellow(` ❗  ${value}`))
+  console.log(chalk.yellow(` ❗  ${value}`));
 }
 export async function run(name: string, callback: Promise<any>) {
-  let countdown = new Spinner(name, ['⣾', '⣽', '⣻', '⢿', '⡿', '⣟', '⣯', '⣷'])
-  callback
-    .catch(async reason => {
+  let countdown = new Spinner(name, ["⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷"]);
+  await callback
+    .catch(async (reason) => {
       countdown.stop();
-      error(name)
-      log(reason)
-      await shouldContinue()
+      error(name);
+      log(reason);
+      await shouldContinue();
     })
-    .then(value => {
+    .then((value) => {
       countdown.stop();
-      success(name)
-    })
+      success(name);
+    });
 }
 export async function shouldContinue() {
-  const yes = await confirm('Do You Want To Continue')
+  const yes = await confirm("Do You Want To Continue");
   if (yes) {
-    log(`Continuing`)
+    log(`Continuing`);
   } else {
-    process.exit(1)
+    process.exit(1);
   }
 }
 export function info(value: string) {
-  console.log(chalk.blue(` 💁  ${value}`))
+  console.log(chalk.blue(` 💁  ${value}`));
 }
 export async function confirm(value: string) {
   const answer = await inquirer.prompt({
-    type: 'confirm',
+    type: "confirm",
     message: value,
-    name: 'confirm',
-  })
-  return answer.confirm
+    name: "confirm",
+  });
+  return answer.confirm;
 }
