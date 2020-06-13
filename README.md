@@ -1,60 +1,70 @@
-# **Nitro** -  Next.js, Material UI, Auth0 and Typescript 
+nitro
+=====
 
-![GitHub stars](https://img.shields.io/github/stars/williamluke4/nitro.svg?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/williamluke4/nitro.svg?style=for-the-badge)
-[![Beerpay](https://beerpay.io/williamluke4/Nitro/badge.svg?style=beer)](https://beerpay.io/williamluke4/Nitro)
+Creates NextJS WPAs from templates
 
-![NMST](nitro.gif)
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/nitro.svg)](https://npmjs.org/package/nitro)
+[![Downloads/week](https://img.shields.io/npm/dw/nitro.svg)](https://npmjs.org/package/nitro)
+[![License](https://img.shields.io/npm/l/nitro.svg)](https://github.com/williamluke4/nitro/blob/master/package.json)
 
-##
-- PR's are very welcome
+<!-- toc -->
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
+# Usage
+<!-- usage -->
+```sh-session
+$ npm install -g nitro
+$ nitro COMMAND
+running command...
+$ nitro (-v|--version|version)
+nitro/0.0.0 win32-x64 node-v12.0.0
+$ nitro --help [COMMAND]
+USAGE
+  $ nitro COMMAND
+...
+```
+<!-- usagestop -->
+# Commands
+<!-- commands -->
+* [`nitro hello [FILE]`](#nitro-hello-file)
+* [`nitro help [COMMAND]`](#nitro-help-command)
 
-- Please add `.env` to `.gitignore` before adding any secrets
+## `nitro hello [FILE]`
 
-## Links
+describe the command here
 
-- [Auth Setup](#auth)
-- [NPM Setup](#npm)
-- [YARN Setup](#yarn)
+```
+USAGE
+  $ nitro hello [FILE]
 
-## Auth
- - [Auth0 Setup](https://github.com/atto-byte/useAuth)
- - Video On [Secrets and Environment Variables in Next.js and Now](https://www.youtube.com/watch?v=pRbQcy9f5ew)
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
 
-## NPM
-
-### Install and Run Dev Server
-
-```bash
-git clone https://github.com/williamluke4/nitro.git
-cd nitro
-
-npm install
-npm run dev
+EXAMPLE
+  $ nitro hello
+  hello world from ./src/hello.ts!
 ```
 
-### Production Build and Start
+_See code: [src\commands\hello.ts](https://github.com/williamluke4/nitro/blob/v0.0.0/src\commands\hello.ts)_
 
-```bash
-  npm run build
-  npm run start
+## `nitro help [COMMAND]`
+
+display help for nitro
+
+```
+USAGE
+  $ nitro help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
 ```
 
-## Yarn
-
-### Install and Run Dev Server
-
-```bash
-git clone https://github.com/williamluke4/nitro.git
-cd nitro
-
-yarn
-yarn dev
-```
-
-### Production Build and Start
-
-```bash
-yarn build
-yarn start
-```
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src\commands\help.ts)_
+<!-- commandsstop -->
