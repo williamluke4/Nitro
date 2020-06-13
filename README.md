@@ -15,11 +15,11 @@ Creates NextJS WPAs from templates
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g nitro
+$ npm install -g @atto-byte/nitro
 $ nitro COMMAND
 running command...
 $ nitro (-v|--version|version)
-nitro/0.0.0 win32-x64 node-v12.0.0
+@atto-byte/nitro/0.0.1 win32-x64 node-v12.0.0
 $ nitro --help [COMMAND]
 USAGE
   $ nitro COMMAND
@@ -47,7 +47,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\create.ts](https://github.com/williamluke4/nitro/blob/v0.0.0/src\commands\create.ts)_
+_See code: [src\commands\create.ts](https://github.com/williamluke4/nitro/blob/v0.0.1/src\commands\create.ts)_
 
 ## `nitro help [COMMAND]`
 
