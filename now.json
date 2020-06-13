@@ -1,0 +1,27 @@
+{
+  "name": "nitro",
+  "version": 2,
+  "builds": [
+    {
+      "src": "/templates/basic/package.json",
+      "use": "@now/next"
+    }
+  ],
+  "build": {
+    "env": {
+      "AUTH0_DOMAIN": "@auth0-domain",
+      "AUTH0_CLIENT_ID": "@auth0-client-id"
+    }
+  },
+  "regions": ["bru"],
+  "routes": [
+    {
+      "src": "^/service-worker.js$",
+      "dest": "/_next/static/service-worker.js",
+      "headers": {
+        "cache-control": "public, max-age=43200, immutable",
+        "Service-Worker-Allowed": "/"
+      }
+    }
+  ]
+}
