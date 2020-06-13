@@ -1,7 +1,7 @@
 {
   "name": "@atto-byte/nitro",
   "description": "Creates NextJS WPAs from templates",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "William Luke @williamluke4",
   "bin": {
     "nitro": "./bin/run"
