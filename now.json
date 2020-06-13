@@ -15,6 +15,7 @@
   },
   "regions": ["bru"],
   "routes": [
+    { "src": "(.*)", "dest": "/templates/basic$1" },
     {
       "src": "^/service-worker.js$",
       "dest": "/templates/basic/_next/static/service-worker.js",
