@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: any) => ({
   root: {
     textAlign: "center",
     height: "calc(100vh - 64px)",
-    position: "relative"
+    position: "relative",
   },
   background: {
     top: 0,
@@ -19,21 +19,21 @@ const useStyles = makeStyles((theme: any) => ({
     height: "100%",
     paddingTop: "10%",
     backgroundColor: "#1d1d1d",
-    zIndex: -1
+    zIndex: -1,
   },
   chipContainer: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   chip: {
     margin: "5px 10px",
     color: theme.palette.primary.text,
-    backgroundColor: theme.palette.primary.main
+    backgroundColor: theme.palette.primary.main,
   },
   strip: {
     paddingTop: 30,
-    paddingBottom: 30
-  }
+    paddingBottom: 30,
+  },
 }));
 
 const Index: React.FC = () => {

@@ -1,7 +1,8 @@
 {
   "short_name": "Nitro",
   "name": "Next.js, Material UI and Typescript",
-  "icons": [{
+  "icons": [
+    {
       "src": "/static/nitro-192.png",
       "type": "image/png",
       "sizes": "192x192"

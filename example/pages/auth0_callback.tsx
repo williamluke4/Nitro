@@ -7,8 +7,8 @@ import { RocketMan } from "components/RocketMan";
 const useStyles = makeStyles(() => ({
   root: {
     textAlign: "center",
-    height: "100vh"
-  }
+    height: "100vh",
+  },
 }));
 const Auth0CallbackPage = () => {
   const { handleAuthentication } = useAuth();

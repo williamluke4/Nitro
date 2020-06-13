@@ -1,17 +1,17 @@
 // https://codepen.io/chrisgannon/pen/EjVyXN
-import * as React from 'react';
-import { makeStyles, createStyles } from '@material-ui/core';
-import { TimelineMax, TweenMax, Linear, Power2 } from 'gsap';
-import clsx from 'clsx';
+import * as React from "react";
+import { makeStyles, createStyles } from "@material-ui/core";
+import { TimelineMax, TweenMax, Linear, Power2 } from "gsap";
+import clsx from "clsx";
 
 const useStyles = makeStyles(() =>
   createStyles({
     svg: {
-      width: '100%',
-      height: '100%',
-      backgroundColor:'#1d1d1d'
+      width: "100%",
+      height: "100%",
+      backgroundColor: "#1d1d1d",
     },
-  }),
+  })
 );
 export const RocketMan = () => {
   React.useEffect(() => {
@@ -19,28 +19,33 @@ export const RocketMan = () => {
   }, []);
   const classes = useStyles();
   const animate = () => {
-    const jetBubbles = document.getElementsByClassName('jetBubble') as HTMLCollectionOf<Element>;
-    const rocketManSVG = document.querySelector('.rocketManSVG') as Element;
+    const jetBubbles = document.getElementsByClassName(
+      "jetBubble"
+    ) as HTMLCollectionOf<Element>;
+    const rocketManSVG = document.querySelector(".rocketManSVG") as Element;
     // const shakeGroup = document.querySelector('.shakeGroup') as Element;
-    const star = document.querySelector('.star') as Element;
-    const satellite = document.querySelector('.satellite') as Element;
-    const astronaut = document.querySelector('.astronaut') as Element;
-    const starContainer = document.querySelector('.starContainer') as Element;
+    const star = document.querySelector(".star") as Element;
+    const satellite = document.querySelector(".satellite") as Element;
+    const astronaut = document.querySelector(".astronaut") as Element;
+    const starContainer = document.querySelector(".starContainer") as Element;
     // const badgeLink = document.querySelector('#badgeLink') as Element;
 
     TweenMax.to(astronaut, 0.05, {
-      y: '+=4',
+      y: "+=4",
       repeat: -1,
       yoyo: true,
     });
     const mainTimeline = new TimelineMax({ repeat: -1 });
-    const mainSpeedLinesTimeline = new TimelineMax({ repeat: -1 , paused:false});
+    const mainSpeedLinesTimeline = new TimelineMax({
+      repeat: -1,
+      paused: false,
+    });
     mainSpeedLinesTimeline.timeScale(2);
     mainTimeline.timeScale(6).seek(100);
     function createJets() {
       TweenMax.set(jetBubbles, {
         attr: {
-          r: '-=5',
+          r: "-=5",
         },
       });
       //jet bubbles
@@ -49,12 +54,12 @@ export const RocketMan = () => {
         const tl = new TimelineMax({ repeat: -1 });
         tl.to(jb, 1, {
           attr: {
-            r: '+=15',
+            r: "+=15",
           },
           ease: Linear.easeNone,
         }).to(jb, 1, {
           attr: {
-            r: '-=15',
+            r: "-=15",
           },
           ease: Linear.easeNone,
         });
@@ -63,33 +68,30 @@ export const RocketMan = () => {
       }
       //speed lines
       for (let i = 0; i < 7; i++) {
-        const sl = document.querySelector('#speedLine' + i) as Element;
+        const sl = document.querySelector("#speedLine" + i) as Element;
         const stl = new TimelineMax({ repeat: -1, repeatDelay: Math.random() });
         stl
           .to(sl, 0, {
             attr: {
-              y1: '-=170%',
-              y2: '-=170%'
+              y1: "-=170%",
+              y2: "-=170%",
             },
             ease: Linear.easeNone,
-            
           })
           .to(sl, 0.2, {
             attr: {
-              y1: '+=270%',
-              y2: '+=170%'
+              y1: "+=270%",
+              y2: "+=170%",
             },
             ease: Linear.easeNone,
-            
           })
           .to(sl, 1, {
             attr: {
-              y1: '+=600%',
-              y2: '+=600%'
+              y1: "+=600%",
+              y2: "+=600%",
             },
             ease: Linear.easeNone,
-            
-          })
+          });
 
         mainSpeedLinesTimeline.add(stl, i / 23);
       }
@@ -112,7 +114,7 @@ export const RocketMan = () => {
             repeat: -1,
             repeatDelay: 1,
             ease: Linear.easeNone,
-          },
+          }
         );
       }
 
@@ -122,12 +124,12 @@ export const RocketMan = () => {
     const satTimeline = new TimelineMax({ repeat: -1 });
     satTimeline.to(satellite, 46, {
       rotation: 360,
-      transformOrigin: '50% 50%',
+      transformOrigin: "50% 50%",
       ease: Linear.easeNone,
     });
 
     TweenMax.staggerTo(
-      '.pulse',
+      ".pulse",
       0.8,
       {
         alpha: 0,
@@ -135,11 +137,11 @@ export const RocketMan = () => {
         ease: Power2.easeInOut,
         yoyo: false,
       },
-      0.1,
+      0.1
     );
 
     TweenMax.staggerTo(
-      '.satellitePulse',
+      ".satellitePulse",
       0.8,
       {
         alpha: 0,
@@ -147,7 +149,7 @@ export const RocketMan = () => {
         ease: Power2.easeInOut,
         yoyo: false,
       },
-      0.1,
+      0.1
     );
 
     createJets();
@@ -156,7 +158,7 @@ export const RocketMan = () => {
   };
   return (
     <svg
-      className={clsx('rocketManSVG', classes.svg)}
+      className={clsx("rocketManSVG", classes.svg)}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 600 600"
@@ -264,20 +266,116 @@ V117.8z"
         />
       </g>
 
-      <g className="speedLines" stroke="#3e3e3e" strokeWidth="2" strokeLinejoin="round">
-        <line id="speedLine0" fill="none" strokeMiterlimit="10" x1="252.5" y1="324" x2="252.5" y2="566" />
-        <line id="speedLine1" fill="none" strokeMiterlimit="10" x1="299.5" y1="500" x2="299.5" y2="557" />
-        <line id="speedLine2" fill="none" strokeMiterlimit="10" x1="347.5" y1="324" x2="347.5" y2="529" />
-        <line id="speedLine3" fill="none" strokeMiterlimit="10" x1="74.5" y1="45" x2="74.5" y2="500" />
-        <line id="speedLine4" fill="none" strokeMiterlimit="10" x1="544.5" y1="29" x2="544.5" y2="574" />
-        <line id="speedLine5" fill="none" strokeMiterlimit="10" x1="415.5" y1="8" x2="415.5" y2="440" />
-        <line id="speedLine6" fill="none" strokeMiterlimit="10" x1="165.5" y1="142" x2="165.5" y2="574" />
+      <g
+        className="speedLines"
+        stroke="#3e3e3e"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      >
+        <line
+          id="speedLine0"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="252.5"
+          y1="324"
+          x2="252.5"
+          y2="566"
+        />
+        <line
+          id="speedLine1"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="299.5"
+          y1="500"
+          x2="299.5"
+          y2="557"
+        />
+        <line
+          id="speedLine2"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="347.5"
+          y1="324"
+          x2="347.5"
+          y2="529"
+        />
+        <line
+          id="speedLine3"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="74.5"
+          y1="45"
+          x2="74.5"
+          y2="500"
+        />
+        <line
+          id="speedLine4"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="544.5"
+          y1="29"
+          x2="544.5"
+          y2="574"
+        />
+        <line
+          id="speedLine5"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="415.5"
+          y1="8"
+          x2="415.5"
+          y2="440"
+        />
+        <line
+          id="speedLine6"
+          fill="none"
+          strokeMiterlimit="10"
+          x1="165.5"
+          y1="142"
+          x2="165.5"
+          y2="574"
+        />
       </g>
-      <rect x="275" y="263.3" clipPath="url(#rainbowClip)" fill="#CC583F" width="10" height="212.7" />
-      <rect x="285" y="263.3" clipPath="url(#rainbowClip)" fill="#ECB447" width="10" height="212.7" />
-      <rect x="295" y="263.3" clipPath="url(#rainbowClip)" fill="#75C095" width="10" height="212.7" />
-      <rect x="305" y="263.3" clipPath="url(#rainbowClip)" fill="#5991AA" width="10" height="212.7" />
-      <rect x="315" y="263.3" clipPath="url(#rainbowClip)" fill="#7D6AAD" width="10" height="212.7" />
+      <rect
+        x="275"
+        y="263.3"
+        clipPath="url(#rainbowClip)"
+        fill="#CC583F"
+        width="10"
+        height="212.7"
+      />
+      <rect
+        x="285"
+        y="263.3"
+        clipPath="url(#rainbowClip)"
+        fill="#ECB447"
+        width="10"
+        height="212.7"
+      />
+      <rect
+        x="295"
+        y="263.3"
+        clipPath="url(#rainbowClip)"
+        fill="#75C095"
+        width="10"
+        height="212.7"
+      />
+      <rect
+        x="305"
+        y="263.3"
+        clipPath="url(#rainbowClip)"
+        fill="#5991AA"
+        width="10"
+        height="212.7"
+      />
+      <rect
+        x="315"
+        y="263.3"
+        clipPath="url(#rainbowClip)"
+        fill="#7D6AAD"
+        width="10"
+        height="212.7"
+      />
 
       <g className="astronaut">
         <g className="pulseSVG" opacity="0.2" stroke="#ededed">
@@ -407,24 +505,89 @@ V117.8z"
             <circle className="jetBubble" cx="319" cy="483" r="21" />
           </g>
           <g id="colorJets" strokeWidth="0" stroke="#3d3d3d">
-            <circle className="jetBubble" fill="#ECB447" cx="312" cy="449" r="8" />
-            <circle className="jetBubble" fill="#7D6AAD" cx="320" cy="480" r="10" />
-            <circle className="jetBubble" fill="#7D6AAD" cx="290" cy="460" r="10" />
-            <circle className="jetBubble" fill="#ECB447" cx="329" cy="453" r="11" />
-            <circle className="jetBubble" fill="#CC583F" cx="286" cy="463" r="7" />
-            <circle className="jetBubble" fill="#ECB447" cx="289" cy="469" r="24" />
-            <circle className="jetBubble" fill="#7D6AAD" cx="260" cy="450" r="20" />
-            <circle className="jetBubble" fill="#5991AA" cx="319" cy="463" r="10" />
-            <circle className="jetBubble" fill="#CC583F" cx="290" cy="463" r="18" />
-            <circle className="jetBubble" fill="#75C095" cx="312" cy="443" r="21" />
+            <circle
+              className="jetBubble"
+              fill="#ECB447"
+              cx="312"
+              cy="449"
+              r="8"
+            />
+            <circle
+              className="jetBubble"
+              fill="#7D6AAD"
+              cx="320"
+              cy="480"
+              r="10"
+            />
+            <circle
+              className="jetBubble"
+              fill="#7D6AAD"
+              cx="290"
+              cy="460"
+              r="10"
+            />
+            <circle
+              className="jetBubble"
+              fill="#ECB447"
+              cx="329"
+              cy="453"
+              r="11"
+            />
+            <circle
+              className="jetBubble"
+              fill="#CC583F"
+              cx="286"
+              cy="463"
+              r="7"
+            />
+            <circle
+              className="jetBubble"
+              fill="#ECB447"
+              cx="289"
+              cy="469"
+              r="24"
+            />
+            <circle
+              className="jetBubble"
+              fill="#7D6AAD"
+              cx="260"
+              cy="450"
+              r="20"
+            />
+            <circle
+              className="jetBubble"
+              fill="#5991AA"
+              cx="319"
+              cy="463"
+              r="10"
+            />
+            <circle
+              className="jetBubble"
+              fill="#CC583F"
+              cx="290"
+              cy="463"
+              r="18"
+            />
+            <circle
+              className="jetBubble"
+              fill="#75C095"
+              cx="312"
+              cy="443"
+              r="21"
+            />
 
-            <circle className="jetBubble" fill="#5991AA" cx="275" cy="443.4" r="12" />
+            <circle
+              className="jetBubble"
+              fill="#5991AA"
+              cx="275"
+              cy="443.4"
+              r="12"
+            />
           </g>
 
           <use xlinkHref="#badge" x="0" y="0" />
         </g>
       </g>
-     
     </svg>
   );
 };
