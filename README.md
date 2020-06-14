@@ -19,15 +19,11 @@ Creates NextJS WPAs from templates
 <!-- tocstop -->
 
 # Templates
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| <img src="./templates/basic/nitro.gif" alt="drawing" width="400"/> [NextJS, Auth0, Material-UI, PWA](./templates/basic/README.md) | | |
 
-<div>
-  <div style="display:flex; flex-direction: column;">
-   <a style="padding:4px; font-size: 18px; text-align: center; width: 300px;" src="./templates/basic/README.md"> NextJS, Auth0, Material-UI, PWA</a>
-    <img src="./templates/basic/nitro.gif" alt="drawing" width="300"/>
-   
-  </div>
 
-</div>
 
 # Usage
 
