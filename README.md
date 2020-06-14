@@ -19,11 +19,10 @@ Creates NextJS WPAs from templates
 <!-- tocstop -->
 
 # Templates
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-| <img src="./templates/basic/nitro.gif" alt="drawing" width="400"/> [NextJS, Auth0, Material-UI, PWA](./templates/basic/README.md) | | |
 
-
+|                                                                                                                                   |     |     |
+| :-------------------------------------------------------------------------------------------------------------------------------: | :-: | :-: |
+| <img src="./templates/basic/nitro.gif" alt="drawing" width="400"/> [NextJS, Auth0, Material-UI, PWA](./templates/basic/README.md) |     |     |
 
 # Usage
 
