@@ -1,15 +1,15 @@
-# nitro
-
-Creates NextJS WPAs from templates
+# Nitro
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/nitro.svg)](https://npmjs.org/package/nitro)
 [![Downloads/week](https://img.shields.io/npm/dw/nitro.svg)](https://npmjs.org/package/nitro)
 [![License](https://img.shields.io/npm/l/nitro.svg)](https://github.com/williamluke4/nitro/blob/master/package.json)
 
+Creates NextJS WPAs from templates
+
 <!-- toc -->
 
-- [nitro](#nitro)
+- [Templates](#templates)
 - [Usage](#usage)
 - [Commands](#commands)
 <!-- tocstop -->
@@ -17,6 +17,17 @@ Creates NextJS WPAs from templates
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
+# Templates
+
+<div>
+  <div style="display:flex; flex-direction: column;">
+   <a style="padding:4px; font-size: 18px; text-align: center; width: 300px;" src="./templates/basic/README.md"> NextJS, Auth0, Material-UI, PWA</a>
+    <img src="./templates/basic/nitro.gif" alt="drawing" width="300"/>
+   
+  </div>
+
+</div>
 
 # Usage
 
