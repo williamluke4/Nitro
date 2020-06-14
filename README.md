@@ -22,6 +22,8 @@ Creates NextJS WPAs from templates
 
 |     |     |     |
 | :-: | :-: | :-: |
+
+
 | <img src="./templates/basic/nitro.gif" alt="drawing" width="400"/>
 [NextJS, Auth0, Material-UI, PWA](./templates/basic/README.md) | | |
 
