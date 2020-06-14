@@ -1,60 +1,144 @@
-# **Nitro** -  Next.js, Material UI, Auth0 and Typescript 
+# Nitro
 
-![GitHub stars](https://img.shields.io/github/stars/williamluke4/nitro.svg?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/williamluke4/nitro.svg?style=for-the-badge)
-[![Beerpay](https://beerpay.io/williamluke4/Nitro/badge.svg?style=beer)](https://beerpay.io/williamluke4/Nitro)
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/nitro.svg)](https://npmjs.org/package/nitro)
+[![Downloads/week](https://img.shields.io/npm/dw/nitro.svg)](https://npmjs.org/package/nitro)
+[![License](https://img.shields.io/npm/l/nitro.svg)](https://github.com/williamluke4/nitro/blob/master/package.json)
 
-![NMST](nitro.gif)
+Creates NextJS WPAs from templates
 
-##
-- PR's are very welcome
+<!-- toc -->
 
-- Please add `.env` to `.gitignore` before adding any secrets
+- [Templates](#templates)
+- [Usage](#usage)
+- [Commands](#commands)
+<!-- tocstop -->
 
-## Links
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 
-- [Auth Setup](#auth)
-- [NPM Setup](#npm)
-- [YARN Setup](#yarn)
+# Templates
 
-## Auth
- - [Auth0 Setup](https://github.com/atto-byte/useAuth)
- - Video On [Secrets and Environment Variables in Next.js and Now](https://www.youtube.com/watch?v=pRbQcy9f5ew)
+|     |     |     |
+| :-: | :-: | :-: |
 
-## NPM
 
-### Install and Run Dev Server
+| <img src="./templates/basic/nitro.gif" alt="drawing" width="400"/>
+[NextJS, Auth0, Material-UI, PWA](./templates/basic/README.md) | | |
 
-```bash
-git clone https://github.com/williamluke4/nitro.git
-cd nitro
+# Usage
 
-npm install
-npm run dev
+<!-- usage -->
+
+```sh-session
+$ npm install -g @atto-byte/nitro
+$ nitro COMMAND
+running command...
+$ nitro (-v|--version|version)
+@atto-byte/nitro/0.0.2 win32-x64 node-v12.0.0
+$ nitro --help [COMMAND]
+USAGE
+  $ nitro COMMAND
+...
 ```
 
-### Production Build and Start
+<!-- usagestop -->
 
-```bash
-  npm run build
-  npm run start
+```sh-session
+$ npm install -g @atto-byte/nitro
+$ nitro COMMAND
+running command...
+$ nitro (-v|--version|version)
+@atto-byte/nitro/0.0.1 win32-x64 node-v12.0.0
+$ nitro --help [COMMAND]
+USAGE
+  $ nitro COMMAND
+...
 ```
 
-## Yarn
+<!-- usagestop -->
 
-### Install and Run Dev Server
+# Commands
 
-```bash
-git clone https://github.com/williamluke4/nitro.git
-cd nitro
+<!-- commands -->
 
-yarn
-yarn dev
+- [`nitro create [TEMPLATE]`](#nitro-create-template)
+- [`nitro help [COMMAND]`](#nitro-help-command)
+
+## `nitro create [TEMPLATE]`
+
+nitro create basic
+
+```
+USAGE
+  $ nitro create [TEMPLATE]
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ nitro create basic something-awesome
+  hello world from ./src/hello.ts!
 ```
 
-### Production Build and Start
+_See code: [src\commands\create.ts](https://github.com/williamluke4/nitro/blob/v0.0.2/src\commands\create.ts)_
 
-```bash
-yarn build
-yarn start
+## `nitro help [COMMAND]`
+
+display help for nitro
+
 ```
+USAGE
+  $ nitro help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src\commands\help.ts)_
+
+<!-- commandsstop -->
+
+- [`nitro create [TEMPLATE]`](#nitro-create-template)
+- [`nitro help [COMMAND]`](#nitro-help-command)
+
+## `nitro create [TEMPLATE]`
+
+nitro create basic
+
+```
+USAGE
+  $ nitro create [TEMPLATE]
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ nitro create basic something-awesome
+  hello world from ./src/hello.ts!
+```
+
+_See code: [src\commands\create.ts](https://github.com/williamluke4/nitro/blob/v0.0.1/src\commands\create.ts)_
+
+## `nitro help [COMMAND]`
+
+display help for nitro
+
+```
+USAGE
+  $ nitro help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src\commands\help.ts)_
+
+<!-- commandsstop -->
