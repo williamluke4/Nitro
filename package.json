@@ -40,7 +40,7 @@
     "prettier": "1.19.1",
     "prettier-eslint": "9.0.2",
     "typescript": "3.9.7",
-    "webpack": "4.44.0"
+    "webpack": "4.44.1"
   },
   "scripts": {
     "dev": "now dev --listen 8080",
