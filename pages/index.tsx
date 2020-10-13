@@ -61,7 +61,7 @@ const Index: React.FC = () => {
               avatar={
                 <Avatar
                   alt="MUI"
-                  src="https://material-ui.com/static/brand.png"
+                  src="https://material-ui.com/static/logo_raw.svg"
                 />
               }
               label="Material-UI"

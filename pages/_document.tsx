@@ -1,5 +1,5 @@
 import * as React from "react";
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import flush from "styled-jsx/server";
 import theme from "styles/theme";
@@ -7,17 +7,13 @@ import theme from "styles/theme";
 class MyDocument extends Document {
   render() {
     return (
-      <html lang="en" dir="ltr">
+      <Html lang="en" dir="ltr">
         <Head>
           <meta charSet="utf-8" />
           {/* Use minimum-scale=1 to enable GPU rasterization */}
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-          />
           <link
             rel="shortcut icon"
-            href="static/favicon.ico"
+            href="favicon.ico"
             type="image/x-icon"
           ></link>
           {/* PWA primary color */}
@@ -31,7 +27,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
