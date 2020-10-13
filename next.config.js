@@ -6,10 +6,10 @@ const nextConfig = {
   target: process.env.NODE_ENV !== "production" ? "server" : "serverless",
   dontAutoRegisterSw: true,
   generateSw: false,
-  devSwSrc: "./static/sw.js",
+  devSwSrc: "./sw.js",
   workboxOpts: {
-    swSrc: "./static/sw.js",
-    swDest: "./static/service-worker.js"
+    swSrc: "./sw.js",
+    swDest: "./service-worker.js"
   },
   // Exposes Server ENV Vars To Client Using Webpack
   env: {
