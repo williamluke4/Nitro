@@ -13,7 +13,7 @@ class MyDocument extends Document {
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <link
             rel="shortcut icon"
-            href="favicon.ico"
+            href="/favicon.ico"
             type="image/x-icon"
           ></link>
           {/* PWA primary color */}
