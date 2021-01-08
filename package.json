@@ -41,7 +41,7 @@
     "prettier-eslint": "9.0.2",
     "typescript": "3.9.7",
     "vercel": "20.1.4",
-    "webpack": "4.44.2"
+    "webpack": "4.45.0"
   },
   "scripts": {
     "dev": "vercel dev --listen 8080",
