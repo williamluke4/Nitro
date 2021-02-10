@@ -38,7 +38,7 @@
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "2.5.1",
     "prettier": "1.19.1",
-    "prettier-eslint": "9.0.2",
+    "prettier-eslint": "12.0.0",
     "typescript": "3.9.9",
     "vercel": "20.1.4",
     "webpack": "4.46.0"
