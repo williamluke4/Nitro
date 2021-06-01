@@ -126,33 +126,31 @@ export const RocketMan = () => {
       ease: Linear.easeNone,
     });
 
-    TweenMax.staggerTo(
+    TweenMax.to(
       '.pulse',
-      0.8,
       {
+        duration: 0.8,
         alpha: 0,
         repeat: -1,
         ease: Power2.easeInOut,
         yoyo: false,
+        stagger: 0.1
       },
-      0.1,
     );
 
-    TweenMax.staggerTo(
+    TweenMax.to(
       '.satellitePulse',
-      0.8,
       {
+        duration: 0.8,
         alpha: 0,
         repeat: -1,
         ease: Power2.easeInOut,
         yoyo: false,
+        stagger: 0.1,
       },
-      0.1,
     );
 
     createJets();
-    console.log(mainSpeedLinesTimeline);
-    console.log(mainTimeline);
   };
   return (
     <svg
