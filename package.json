@@ -21,7 +21,7 @@
     "@types/dotenv": "8.2.0",
     "@types/eslint": "7.2.12",
     "@types/react-jss": "10.0.0",
-    "@types/styled-jsx": "2.2.8",
+    "@types/styled-jsx": "2.2.9",
     "@types/typescript": "2.0.0",
     "@typescript-eslint/eslint-plugin": "4.26.0",
     "@typescript-eslint/parser": "4.26.0",
