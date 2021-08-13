@@ -9,7 +9,7 @@
     "dotenv": "10.0.0",
     "dotenv-load": "2.0.0",
     "gsap": "3.6.1",
-    "next": "10.2.3",
+    "next": "11.1.0",
     "next-compose-plugins": "2.2.1",
     "next-env": "1.1.1",
     "next-offline": "5.0.5",
