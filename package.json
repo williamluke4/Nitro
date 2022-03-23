@@ -7,7 +7,7 @@
     "@material-ui/icons": "4.11.2",
     "clsx": "1.1.1",
     "dotenv": "10.0.0",
-    "dotenv-load": "2.0.0",
+    "dotenv-load": "2.0.1",
     "gsap": "3.9.1",
     "next": "11.1.4",
     "next-compose-plugins": "2.2.1",
