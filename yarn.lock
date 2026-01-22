@@ -1296,10 +1296,10 @@
   resolved "https://registry.npmjs.org/@types/auth0-js/-/auth0-js-9.14.0.tgz"
   integrity sha512-eNppxXJqH7BJD1n85UEpdIKmZ0QrdRNy2O2CSZ4aTWgqxP4aIJyOOE71aPj6XoQkjNt4FZzX5WRdI7HANzgjyA==
 
-"@types/dotenv@8.2.0":
-  version "8.2.0"
-  resolved "https://registry.npmjs.org/@types/dotenv/-/dotenv-8.2.0.tgz"
-  integrity sha512-ylSC9GhfRH7m1EUXBXofhgx4lUWmFeQDINW5oLuS+gxWdfUeW4zJdeVTYVkexEW+e2VUvlZR2kGnGGipAWR7kw==
+"@types/dotenv@8.2.3":
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/@types/dotenv/-/dotenv-8.2.3.tgz#c97b3c5b2e97ff3873793a000999e86cd66ff354"
+  integrity sha512-g2FXjlDX/cYuc5CiQvyU/6kkbP1JtmGzh0obW50zD7OKeILVL0NSpPWLXVfqoAGQjom2/SLLx9zHq0KXvD6mbw==
   dependencies:
     dotenv "*"
 
